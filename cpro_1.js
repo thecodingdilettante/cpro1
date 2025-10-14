@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
   tooltip.className = "tooltip";
   document.body.appendChild(tooltip);
 
-  document.querySelectorAll("[data-tooltip]").forEach(elem => {
-    elem.addEventListener("mouseover", function() {
+  document.querySelectorAll("[data-tooltip]").forEach(tooltipLoc => {
+    tooltipLoc.addEventListener("mouseover", function() {
       tooltip.textContent = this.dataset.tooltip;
       const rect = this.getBoundingClientRect();
       tooltip.style.left = rect.left + window.scrollX + "px";
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
       tooltip.style.display = "block";
     });
 
-    elem.addEventListener("mouseout", function() {
+    tooltipLoc.addEventListener("mouseout", function() {
       tooltip.style.display = "none";
     });
   });
