@@ -3,26 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="activity_7b.js"></script>
+    <script src="cpro_1.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>User Feedback Form</title>
 </head>
 
 <body>
     <header>
-        <h1>User Feedback Form</h1>
+        <h1><center>User Feedback Form</center></h1>
     </header>
 
-            <center><form action"">
-                  <label for="userName">User Name: </label><br>
-                  <input type="text" name="userName" id="userName"><br>
-                  <label for="email">Email: </label><br>
-                  <input type="text" name="email" id="email"><br><br>
-                  Comments:<br>
-                  <textarea placeholder="Enter some text"></textarea>
-                  <br><br><button>Send</button>
-                  
+            <center><form id="feedback-form">
+                  <label for="userName">User Name:</label><br>
+                  <input name="userName" id="userName" placeholder="Enter some text." required/><br>
+                  <label for="email">Email:</label><br>
+                  <input name="email" id="email" placeholder="Enter some text." required/><br><br>
+                  Comments:
+                  <br>(please use at least 30 characters)<br>
+                  <textarea id="message" placeholder="Enter some text." minlength="30"></textarea><img data-tooltip="This is a tooltip" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Black_question_mark.png" height="100"/>
+                  <div class="counter">Characters: <span id="count">0</span></div>
+                  <br><button class="myButton">Send</button><p>
           </form></center>
 
+
+          <container>
+            <div id="feedback-display">
+
+            </div>
+          </container>
+
+<script>
+const message = document.getElementById("message")
+const count = document.getElementById("count")
+
+message.addEventListener("input", ()=> {
+  count.innerText = message.value.length;
+});
+
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
+
+
+</script>
 </body>
 </html>

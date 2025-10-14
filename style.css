@@ -7,117 +7,13 @@ body {
   border-top: 10px solid #679F92;
   border-bottom: 10px solid #679F92;
   }
-
-/*Individual Links*/
-.link {
-  text-align: center;
-  display: inline-block;
-  font-weight: bold;
-  font-size: 1.16em;
-  padding: 5px;
-  margin-right: 10px;
-  margin-left: 10px;
-  line-height: 0%;
-  }
-
-a:link {
-  color: #679F92;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #679F92;
-}
-
-a:hover {
-  color: #000000;
-  text-decoration: underline;
-}
-
-a:active {
-  color: yellow;
-  text-decoration: underline;
-}
-  
-/*Link Ends*/
-  
-  header {
-    background-color: #f5f2f2;
-    color: black;
-    padding: 2rem;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    font-family: 'Bungee Shade', sans-serif;
-  }
-  
-  header p {
-    font-size: 1rem;
-    margin-top: 0.5rem;
-  }
-  
-  main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
-  }
-  
-  section {
-    margin-bottom: 2rem;
-  }
-  
-  h2 {
-    color: var(--header-color);
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 0.3rem;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  ul li {
-    margin-bottom: 0.5rem;
-  }
-  
-  footer {
-    background-color: #e5e3d3;
-    color: var(--background);
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
-
-/* FLEXBOX */
-
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  background-color: #353218;
-  overflow:hidden;
-  border-radius: 15px;
-}
-
-.flex-container > div {
-  background-color: #e5e3d3;
-  width: auto;
-  margin: 10px;
-  text-align: center;
-  line-height: 50px;
-  font-size: 15px;
-}
   
 /* BUTTON */
 
   .myButton {
   display: inline-block;
   border-radius: 4px;
-  background-color: #679F92;
+  background-color: #4e6ccd;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -149,43 +45,24 @@ a:active {
   right: 0;
 }
 
-/* SERVICE SECTION */
+/* TEXT AREA */
 
-.service {
-  padding: 20px;
-  background-color: #e5e3d3;
+textarea {
+  width: 40%;
+  height: 100px;
+  padding: 10px;
+  font-size: 1rem;
+
 }
 
-/* DEVICES */
+/*TOOLTIP*/
 
- /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .service {background-color: rgb(195, 239, 199);}
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .service {background-color: #eab4e3;}
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .service {background-color: rgb(198, 240, 140);}
-} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .service {background-color: rgb(247, 186, 72);}
-} 
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .service {
-    background-color: #e5e3d3;}
-}
-
-@media (max-width: 800px) {
-  .flex-container {
-    flex-direction: column;
-  }
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
 }
