@@ -15,22 +15,34 @@
 
             <center><form id="feedback-form">
                   <label for="userName">User Name:</label><br>
-                  <input name="userName" id="userName" placeholder="Enter some text." required/><br>
+                  <input name="userName" id="userName" placeholder="Your name here." required/><br>
                   <label for="email">Email:</label><br>
-                  <input name="email" id="email" placeholder="Enter some text." required/><br><br>
+                  <input name="email" id="email" placeholder="example@example.com" required/><br><br>
                   Comments:
                   <br>(please use at least 30 characters)<br>
                   <textarea id="message" placeholder="Enter some text." minlength="30"></textarea><img data-tooltip="This is a tooltip" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Black_question_mark.png" height="100"/>
                   <div class="counter">Characters: <span id="count">0</span></div>
-                  <br><button class="myButton">Send</button><p>
+                  <br><button class="myButton" id="ohButton">Send</button><p>
           </form></center>
 
 
           <container>
-            <div id="feedback-display">
+            <div id="feedback-display"><br><h2><center>Comments</center></h2>
 
             </div>
           </container>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script>
 const message = document.getElementById("message")
@@ -43,9 +55,21 @@ message.addEventListener("input", ()=> {
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  event.stopPropagation()
-});
+  e.stopPropagation()
 
+const nameInput = document.getElementById("userName");
+const emailInput = document.querySelector("#email");
+const commentInput = document.querySelector("#message");
+
+const entry = document.createElement("div");
+entry.className = "feedback-form";
+    entry.innerHTML = `
+<p><strong>Name:</strong> ${document.getElementById("userName").value}</p>
+<p><strong>Email:</strong> ${document.getElementById("email").value}</p>
+<p><strong>Comments:</strong> ${document.getElementById("message").value}</p>
+    `;
+const feedbackDisplay = document.getElementById("feedback-display").appendChild(entry);
+});
 
 
 </script>
