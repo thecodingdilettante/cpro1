@@ -1,3 +1,5 @@
+//Tooltip
+
 document.addEventListener("DOMContentLoaded", function() {
   const tooltip = document.createElement("div");
   tooltip.className = "tooltip";
@@ -18,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+//Form Validation
 const email = document.getElementById("message");
 
 message.addEventListener("input", (event) => {

@@ -45,6 +45,8 @@
 
 
 <script>
+
+  //Comment character count
 const message = document.getElementById("message")
 const count = document.getElementById("count")
 
@@ -56,6 +58,8 @@ const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   e.stopPropagation()
+
+  //Appending new comments
 
 const nameInput = document.getElementById("userName");
 const emailInput = document.querySelector("#email");
